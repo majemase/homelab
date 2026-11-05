@@ -1,0 +1,17 @@
+# Secretos: solo se suben los .env.example
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Datos de los servicios (bases de datos, volúmenes, copias)
+data/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite3
+backups/out/
+
+*.log
+.DS_Store
