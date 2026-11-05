@@ -4,6 +4,9 @@ Un archivo por decisión, numerado: `NNNN-titulo-corto.md`. Un ADR no se reescri
 decisión cambia, se escribe uno nuevo que la sustituye y se marca el antiguo como
 "Sustituido por NNNN".
 
+Aquí van las decisiones de infraestructura compartida. Las decisiones propias de una app
+(motor de BD, roles…) van en el `docs/adr/` del repo de esa app.
+
 | Nº | Decisión | Estado |
 |---|---|---|
 | [0001](0001-idp-central-oidc.md) | IdP central con OIDC para todas las apps | Aceptado |

@@ -40,8 +40,9 @@ IdP concreto: pendiente (Pocket ID o Authelia, ver un ADR posterior).
 
 - Un solo usuario y un solo login (SSO) para todas las apps; las apps nunca ven contraseñas.
 - Añadir una app nueva consiste en registrar un cliente OIDC y crear su grupo.
-- El IdP pasa a ser una pieza crítica: si cae, no se puede entrar en ninguna app. Necesita
-  copias de seguridad probadas.
+- El IdP pasa a ser una pieza crítica: si cae, nadie puede **iniciar** sesión en ninguna
+  app. Las sesiones ya abiertas siguen funcionando hasta que caducan, porque la sesión es de
+  cada app, no del IdP. Necesita copias de seguridad probadas.
 - Exige el proxy con HTTPS y una URL estable: el navegador y las apps deben alcanzar el IdP en
   la misma dirección, y las passkeys no funcionan sin HTTPS fuera de `localhost`.
 - En desarrollo, cada app puede funcionar sin IdP con un usuario de desarrollo, que nunca vale
